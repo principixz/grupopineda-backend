@@ -1,0 +1,10 @@
+// 08/08/2021
+se agregara el campo 
+tabla empleado_token_firebase tipo text
+
+// 28/11/2021
+se agrego cambpo
+tabla movimiento int(11) venta_idventas
+
+//29/11/2021
+tabla venta venta_estado_nueva_venta int 11 default 0

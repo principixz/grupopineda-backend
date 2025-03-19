@@ -1,0 +1,23 @@
+@page{
+    margin: 0px 10px 0px 10px;
+  size:80mm 250mm;font-family: "Arial Narrow", Arial, sans-serif !important;
+  print-color-adjust: exact;
+}
+
+
+ @media print {
+   html, body {
+    width: 80mm;
+    height:100%;
+    position:absolute;
+  
+   }
+
+ 
+#titulo {
+      font-weight: 700;
+      font-size: 12pt;
+      color: black;
+    text-align: center;
+}
+}
