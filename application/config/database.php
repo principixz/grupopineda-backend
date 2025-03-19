@@ -74,12 +74,36 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 
-$db['default'] = array(
+/*$db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => '3.139.130.88',
-	'username' => 'GrupoPineda', 
+	'username' => 'MrFit', 
 	'password' => 'JZWZP9xFQldzH4+p4+llLw==',
-	'database' => 'grupopineda_db',
+	'database' => 'mrfit_db',
+	'dbdriver' => 'mysqli',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => (ENVIRONMENT !== 'production'),
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);*/
+$db['default']['options'] = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET SESSION sql_mode=''"); 
+
+
+$db['default'] = array(
+	'dsn'	=> '',
+	'hostname' => 'localhost:3306',
+	'username' => 'root', 
+	'password' => '',
+	'database' => 'proyecto_royer',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -95,27 +119,3 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
-$db['default']['options'] = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET SESSION sql_mode=''"); 
-
-
-// $db['default'] = array(
-// 	'dsn'	=> '',
-// 	'hostname' => 'localhost:3306',
-// 	'username' => 'root', 
-// 	'password' => '',
-// 	'database' => 'proyecto_royer',
-// 	'dbdriver' => 'mysqli',
-// 	'dbprefix' => '',
-// 	'pconnect' => FALSE,
-// 	'db_debug' => (ENVIRONMENT !== 'production'),
-// 	'cache_on' => FALSE,
-// 	'cachedir' => '',
-// 	'char_set' => 'utf8',
-// 	'dbcollat' => 'utf8_general_ci',
-// 	'swap_pre' => '',
-// 	'encrypt' => FALSE,
-// 	'compress' => FALSE,
-// 	'stricton' => FALSE,
-// 	'failover' => array(),
-// 	'save_queries' => TRUE
-// );

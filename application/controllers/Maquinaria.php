@@ -60,8 +60,9 @@ class Maquinaria extends BaseController {
             if (!$data_token) {
                 throw new CustomException('Token de autorización inválido.', 401);
             } 
+            $empresa_ruc = $this->input->get('empresa_ruc');
             // Obtener datos de la tabla maquinaria
-            $data['maquinaria'] = $this->Maquinaria_m->obtener_todos('maquinaria'); 
+            $data['maquinaria'] = $this->Maquinaria_m->obtener_por_ruc('maquinaria',$empresa_ruc); 
             if ($data['maquinaria'] === false) {
                 throw new CustomException('No se pudieron obtener las maquinarias.', 500);
             }
